@@ -25,7 +25,7 @@ The SendGrid Newsletter plugin provides a shortcode for adding the subscription 
 
 csharpCopy code
 
-`[sendgrid_newsletter]`
+`[subscribe_form]`
 
 ## Customizing the Subscription Form
 
