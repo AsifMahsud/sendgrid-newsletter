@@ -2,11 +2,15 @@
 /*
 Plugin Name: Sendgrid Newsletter
 Plugin URI: https://letsremotify.com
-Description: A custom plugin for newsletter subscription.
+Description: Managing newsletter subscriptions and sending emails via Sendgrid API.
 Version: 1.0.0
+Requires at least: 5.2
+Requires PHP: 7.2
 Author: Muhammad Asif
 Author URI: mailto: asifmahsud543@gmail.com
-License: GPL2
+Text Domain: sg_newsletter
+License: GPL v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 */
 
 define('SG_NEWSLETTER_PLUGIN', plugin_dir_path(__FILE__));
