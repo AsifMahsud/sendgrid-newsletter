@@ -19,8 +19,12 @@ if (isset($_POST['email']) && isset($_POST['newsletter'])) {
         ]
     }');
 
-    $sg->client->marketing()->contacts()->put($request_body);
-    echo '<style>.subscribe-form__message_success, .subscribe-form__message {display: block !important;}</style>';
+    try {
+        $sg->client->marketing()->contacts()->put($request_body);
+        echo '<style>.subscribe-form__message_success, .subscribe-form__message {display: block !important;}</style>';
+    } catch (Exception $ex) {
+        echo '<style>.subscribe-form__message_error, .subscribe-form__message {display: block !important;}</style>';
+    }
 }
 
 if ($api_key && $list_id && $newsletter_field_id) {

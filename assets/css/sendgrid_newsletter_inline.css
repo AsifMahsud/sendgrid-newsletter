@@ -1,0 +1,78 @@
+.sendgrid_newsletter_inline_form {
+    display: flex;
+    gap: 16px;
+    max-width: 828px;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sendgrid_newsletter__message {
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    font-size: 16px;
+    font-weight: 700;
+    display: none;
+}
+
+.sendgrid_newsletter__message_success,
+.sendgrid_newsletter__message_error {
+    display: none;
+}
+
+input#sendgrid_email {
+    background: #F9F9F9;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    padding-left: 50px;
+}
+
+input#sendgrid_email::placeholder {
+    color: #BEBEBE;
+    font-size: 13px;
+}
+
+.sendgrid_email_block {
+    position: relative;
+    width: 100%;
+}
+
+.sendgrid_email_block:before {
+    content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj4KICA8bWFzayBpZD0ibWFzazBfMTY2NF8zOTQwIiBzdHlsZT0ibWFzay10eXBlOmFscGhhIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiPgogICAgPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjQTlBOUE5Ij48L3JlY3Q+CiAgPC9tYXNrPgogIDxnIG1hc2s9InVybCgjbWFzazBfMTY2NF8zOTQwKSI+CiAgICA8cGF0aCBkPSJNNCAyMEMzLjQ1IDIwIDIuOTc5MzMgMTkuODA0MyAyLjU4OCAxOS40MTNDMi4xOTYgMTkuMDIxIDIgMTguNTUgMiAxOFY2QzIgNS40NSAyLjE5NiA0Ljk3OTMzIDIuNTg4IDQuNTg4QzIuOTc5MzMgNC4xOTYgMy40NSA0IDQgNEgyMEMyMC41NSA0IDIxLjAyMSA0LjE5NiAyMS40MTMgNC41ODhDMjEuODA0MyA0Ljk3OTMzIDIyIDUuNDUgMjIgNlYxOEMyMiAxOC41NSAyMS44MDQzIDE5LjAyMSAyMS40MTMgMTkuNDEzQzIxLjAyMSAxOS44MDQzIDIwLjU1IDIwIDIwIDIwSDRaTTEyIDEzTDIwIDhWNkwxMiAxMUw0IDZWOEwxMiAxM1oiIGZpbGw9IiNBOUE5QTkiPjwvcGF0aD4KICA8L2c+Cjwvc3ZnPgo=');
+    position: absolute;
+    left: 15px;
+    top: 13px;
+}
+
+button.sendgrid_newsletter_form-btn {
+    background-color: #912CC6;
+    color: #FFFFFF;
+    width: 250px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button.sendgrid_newsletter_form-btn:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+@media (min-width:961px) {
+
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .sendgrid_newsletter_inline_form {
+        flex-wrap: nowrap;
+    }
+}
