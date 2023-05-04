@@ -17,15 +17,11 @@ In order to use the SendGrid Newsletter plugin, you must have:
 2.  Activate the plugin through the 'Plugins' menu in WordPress
 3.  In the WordPress dashboard, go to the SendGrid Newsletter settings page and enter your SendGrid API key
 4.  Create a new subscription form in the SendGrid Newsletter settings and choose the SendGrid contacts list to add subscribers to.
-5.  Use the shortcode `[sendgrid_newsletter]` to add the subscription form to your WordPress pages or posts.
+5.  Use one of the following shortcodes to add the subscription form to your WordPress pages or posts:
 
-## Shortcode
-
-The SendGrid Newsletter plugin provides a shortcode for adding the subscription form to your WordPress pages or posts. Use the following shortcode to render the form:
-
-csharpCopy code
-
-`[subscribe_form]`
+    1. `[sendgrid_newsletter_options_style]`
+    2. `[sendgrid_newsletter_inline_style]`
+    3. `[sendgrid_newsletter_sidebar_style]`
 
 ## Customizing the Subscription Form
 

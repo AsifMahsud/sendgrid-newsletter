@@ -21,6 +21,7 @@ function sg_newsletter_enqueue_admin_scripts($hook)
 {
     if ($hook === 'toplevel_page_sendgrid-newsletter-settings') {
         wp_enqueue_style('sg_newsletter-admin-settings-css', SG_NEWSLETTER_PLUGIN_URL . 'admin/assets/css/admin_settings_page.css');
+        wp_enqueue_script('sg_newsletter-admin-settings-js', SG_NEWSLETTER_PLUGIN_URL . 'admin/assets/js/admin_settings_page.js', array('jquery'), '1.0', true);
     }
 }
 add_action('admin_enqueue_scripts', 'sg_newsletter_enqueue_admin_scripts');

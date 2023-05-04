@@ -106,3 +106,72 @@ h3 {
     font-style: italic;
     color: #777;
 }
+
+/* Style for the newsletter tabs */
+.newsletter-tabs {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tab-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tab-list li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.tab-list li:last-child {
+    margin-right: 0;
+}
+
+.tab-list li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    background-color: #eee;
+    border-radius: 5px 5px 0 0;
+    text-decoration: none;
+}
+
+.tab-list li.active a,
+.tab-list li a:hover {
+    background-color: #fff;
+}
+
+.tab-content .tab-pane {
+    display: none;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+    background-color: #fff;
+}
+
+.tab-content .tab-pane.active {
+    display: block;
+}
+
+.sendgrid_newsletter_tab_info {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.sendgrid_newsletter_tab_info code {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 2px 5px;
+    margin: 0 2px;
+}

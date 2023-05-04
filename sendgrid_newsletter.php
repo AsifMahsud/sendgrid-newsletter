@@ -38,18 +38,41 @@ function subscribe_form_activation()
 }
 register_activation_hook(__FILE__, 'subscribe_form_activation');
 
-function subscribe_form_shortcode()
+function sendgrid_newsletter_form_shortcode()
 {
-    wp_enqueue_style('subscribe-form-style', SG_NEWSLETTER_PLUGIN_URL . '/assets/css/subscribe-form.css');
-    wp_enqueue_script('subscribe-form-script', SG_NEWSLETTER_PLUGIN_URL . '/assets/js/subscribe-form.js', array('jquery'), '1.0', true);
+    wp_enqueue_style('subscribe-form-style', SG_NEWSLETTER_PLUGIN_URL . '/assets/css/sendgrid_newsletter.css');
+    wp_enqueue_script('subscribe-form-script', SG_NEWSLETTER_PLUGIN_URL . '/assets/js/sendgrid_newsletter.js', array('jquery'), '1.0', true);
 
     ob_start();
-    include_once(plugin_dir_path(__FILE__) . 'templates/subscribe-form.php');
+    include_once(plugin_dir_path(__FILE__) . 'templates/sendgrid_newsletter_options_style.php');
     $output = ob_get_clean();
     return $output;
 }
 
+add_shortcode('sendgrid_newsletter_options_style', 'sendgrid_newsletter_form_shortcode');
 
-add_shortcode('subscribe_form', 'subscribe_form_shortcode');
+function sendgrid_newsletter_inline_form_shortcode()
+{
+    wp_enqueue_style('subscribe-form-style', SG_NEWSLETTER_PLUGIN_URL . '/assets/css/sendgrid_newsletter_inline.css');
+
+    ob_start();
+    include_once(plugin_dir_path(__FILE__) . 'templates/sendgrid_newsletter_inline_style.php');
+    $output = ob_get_clean();
+    return $output;
+}
+
+add_shortcode('sendgrid_newsletter_inline_style', 'sendgrid_newsletter_inline_form_shortcode');
+
+function sendgrid_newsletter_sidebar_form_shortcode()
+{
+    wp_enqueue_style('subscribe-form-style', SG_NEWSLETTER_PLUGIN_URL . '/assets/css/sendgrid_newsletter_sidebar.css');
+
+    ob_start();
+    include_once(plugin_dir_path(__FILE__) . 'templates/sendgrid_newsletter_sidebar_style.php');
+    $output = ob_get_clean();
+    return $output;
+}
+
+add_shortcode('sendgrid_newsletter_sidebar_style', 'sendgrid_newsletter_sidebar_form_shortcode');
 
 require_once SG_NEWSLETTER_PLUGIN . '/load.php';
