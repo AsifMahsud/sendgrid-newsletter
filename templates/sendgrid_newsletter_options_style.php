@@ -51,7 +51,7 @@ if ($api_key && $list_id && $newsletter_field_id) {
         <div class="subscribe-form-options">
             <?php
             global $wpdb;
-            $table_name = $wpdb->prefix . 'subscribe_form_options';
+            $table_name = $wpdb->prefix . 'manage_sendgrid_newsletter';
             $options = $wpdb->get_results("SELECT * FROM $table_name");
             ?>
             <?php foreach ($options as $option) { ?>

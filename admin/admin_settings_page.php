@@ -1,6 +1,6 @@
 <?php
 global $wpdb;
-$table_name = $wpdb->prefix . 'subscribe_form_options';
+$table_name = $wpdb->prefix . 'manage_sendgrid_newsletter';
 $api_key = get_option('sg_newsletter_api_key');
 $selected_list = get_option('sendgrid_contact_list');
 $inline_selected_list = get_option('sendgrid_inline_contact_list');
