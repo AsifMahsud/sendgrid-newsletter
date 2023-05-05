@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Sendgrid Newsletter
+Plugin Name: Manage Sendgrid Newsletter
 Plugin URI: https://letsremotify.com
 Description: Managing newsletter subscriptions and sending emails via Sendgrid API.
 Version: 1.0.0
-Requires at least: 5.2
+Requires at least: 6.0
 Requires PHP: 7.2
 Author: Muhammad Asif
 Author URI: mailto: asifmahsud543@gmail.com
@@ -16,10 +16,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 define('SG_NEWSLETTER_PLUGIN', plugin_dir_path(__FILE__));
 define('SG_NEWSLETTER_PLUGIN_URL', plugin_dir_url(__FILE__));
 
-function subscribe_form_install()
+function sendgrid_newsletter_install()
 {
     global $wpdb;
-    $table_name = $wpdb->prefix . 'subscribe_form_options';
+    $table_name = $wpdb->prefix . 'manage_sendgrid_newsletter';
     $charset_collate = $wpdb->get_charset_collate();
     $sql = "CREATE TABLE IF NOT EXISTS $table_name (
       id mediumint(9) NOT NULL AUTO_INCREMENT,
@@ -33,14 +33,14 @@ function subscribe_form_install()
     dbDelta($sql);
 }
 
-function subscribe_form_activation()
+function sendgrid_newsletter_activation()
 {
     // Run installation function
-    subscribe_form_install();
+    sendgrid_newsletter_install();
     // Clear the permalinks after activation
     flush_rewrite_rules();
 }
-register_activation_hook(__FILE__, 'subscribe_form_activation');
+register_activation_hook(__FILE__, 'sendgrid_newsletter_activation');
 
 function sendgrid_newsletter_form_shortcode()
 {
