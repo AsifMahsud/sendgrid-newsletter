@@ -5,7 +5,7 @@ $newsletter_field_id = get_option('sg_newsletter_field');
 
 if (isset($_POST['email']) && isset($_POST['newsletter'])) {
     $sg = new \SendGrid($api_key);
-    $email = $_POST['email'];
+    $email = sanitize_email($_POST['email']);
     $newsletter = $_POST['newsletter'];
     $request_body = json_decode('{
         "list_ids": ["' . $list_id . '" ],

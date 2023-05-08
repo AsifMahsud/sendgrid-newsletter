@@ -4,7 +4,7 @@ $list_id = get_option('sendgrid_sidebar_contact_list');
 
 if (isset($_POST['sendgrid_email'])) {
     $sg = new \SendGrid($api_key);
-    $email = $_POST['sendgrid_email'];
+    $email = sanitize_email($_POST['sendgrid_email']);
     $request_body = json_decode('{
         "list_ids": ["' . $list_id . '" ],
         "contacts": [

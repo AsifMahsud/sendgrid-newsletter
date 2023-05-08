@@ -8,7 +8,7 @@ Requires at least: 6.0
 Requires PHP: 7.2
 Author: Muhammad Asif
 Author URI: mailto: asifmahsud543@gmail.com
-Text Domain: sg_newsletter
+Text Domain: msg_newsletter
 License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 */

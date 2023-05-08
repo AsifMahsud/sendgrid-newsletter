@@ -20,8 +20,8 @@ $options = $wpdb->get_results(
             foreach ($options as $option) {
                 echo '<tr>';
                 echo '<td><img src="' . esc_attr($option->image) . '" width="200"></td>';
-                echo '<td>' . esc_html($option->title) . '</td>';
-                echo '<td>' . esc_html($option->description) . '</td>';
+                echo '<td>' . wp_kses_post($option->title) . '</td>';
+                echo '<td>' . wp_kses_post($option->description) . '</td>';
                 echo '<td>' . esc_html($option->frequency) . '</td>';
                 echo '<td>
                 <form method="POST">
